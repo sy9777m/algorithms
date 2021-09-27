@@ -1,0 +1,15 @@
+insertion sort
+현재 scope하는 index의 값을 따로 저장
+현재 scope하는 (index + 1)의 length를 가지는 array만 가지고 insertion 여부를 판단하는 비교 loop 실행
+현재 scope하는 index의 값과 (index - 1)의 값을 비교연산
+(index - 1)의 값이 index의 값보다 작을 경우 index에 (index - 1)의 값을 넣어주고, (index - 1)의 값과 (index - 2)의 값을 비교 연산, 해당 과정을 (index - n) = -1이 될 때까지 반복
+이 반복을 거치면 위에서 말했던 (index + 1)의 length를 가지는 array만 가지고 loop를 돌며 insertion 여부를 결정하는 비교연산을 한 것이 됨
+이 index를 1부터 끝까지 실행하면 insertion sort로 sorted된 array를 얻을 수 있음
+
+bubble sort
+값을 비교해서 자리를 바꿔야 하기 때문에 swap function을 따로 구현
+맨 마지막 값을 제외하고는 모두 최소 한 번씩은 비교연산의 기준이 되는 key가 되어야 하기 때문에 (length - 1)번 반복하는 큰 loop문 작성
+큰 loop문 내부에 swap 비교연산을 실행하는 loop문을 작성
+해당 loop 내에서는 key value와 comp value를 비교해서 key value < comp value일 경우 둘의 자리를 바꾸고 바뀐 자리를 기준으로 다시 비교연산을 반복
+이렇게 key value는 자신보다 작은 comp value를 만날 때까지 array의 끝으로 밀려남
+이러한 swap 비교연산을 통해 array의 끝에는 sorted된 영역이 쌓이고, (length - 1)개의 key value가 각각 다 swap 비교연산의 대상이 되기 때문에 최종적으로 descending sorted array를 만들 수 있음
